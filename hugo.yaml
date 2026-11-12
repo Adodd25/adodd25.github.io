@@ -1,7 +1,7 @@
 # Default address for this repo. The deploy workflow overrides this with
 # whatever GitHub Pages reports, so renaming the repo or adding a custom
 # domain needs no change here.
-baseURL: "https://adodd25.github.io/about-me/"
+baseURL: "https://adodd25.github.io/"
 locale: en-us
 title: "Anthony Dodd"
 theme: PaperMod

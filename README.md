@@ -8,7 +8,7 @@ I went to college to become a physical therapist. Now I study how AI can transfo
 
 This is my professional operating manual — how I think about security, venture, and leadership.
 
-**🌐 Read it as a website: [adodd25.github.io/about-me](https://adodd25.github.io/about-me/)**
+**🌐 Read it as a website: [adodd25.github.io](https://adodd25.github.io/)**
 
 ---
 

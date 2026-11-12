@@ -53,6 +53,12 @@ params:
       to get hacked. This site is my professional operating manual: how I think
       about security, venture, and leadership.
 
+    Terminal:
+      - "whoami → security strategist"
+      - "nmap -sV career → 4 open ports: security, AI, strategy, venture"
+      - "scanning network… 0 threats found. welcome."
+      - "translating risk for the boardroom"
+      - "sudo make startups-secure"
     Buttons:
       - name: "View my resume"
         url: "resume/"

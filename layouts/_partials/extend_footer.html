@@ -1,0 +1,4 @@
+{{- /* Animated network-defense background (full strength on the home page, softer elsewhere). */ -}}
+<canvas id="cyber-bg" aria-hidden="true" data-intensity="{{ if .IsHome }}1{{ else }}0.5{{ end }}"></canvas>
+{{- $js := resources.Get "js/cyber-bg.js" | js.Build (dict "minify" true) | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>

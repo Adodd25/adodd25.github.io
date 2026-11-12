@@ -110,3 +110,45 @@
 .post-content a.page-link-card:hover { border-color: var(--secondary); transform: translateY(-1px); }
 .page-link-card strong { color: var(--primary); }
 .page-link-card span { color: var(--secondary); font-size: 0.88rem; line-height: 1.4; }
+
+/* ---- Animated background ---- */
+html { background: var(--theme); }
+html:has(body.list) { background: var(--code-bg); }
+[data-theme="dark"]:has(body.list) { background: var(--theme); }
+body, body.list, [data-theme="dark"] body.list { background: transparent; }
+#cyber-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+/* Keep long-form text crisp over the animation */
+.post-single .post-content,
+.post-single .post-header,
+.toc {
+    position: relative;
+}
+.home-info { background: transparent; }
+@media print { #cyber-bg { display: none; } }
+
+/* ---- Terminal line on the home page ---- */
+.terminal-line {
+    margin: 0.2rem 0 1rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9rem;
+    color: rgb(15, 118, 110);
+    min-height: 1.5em;
+}
+[data-theme="dark"] .terminal-line { color: rgb(94, 234, 212); }
+.terminal-line .prompt { opacity: 0.65; }
+.terminal-line .caret {
+    display: inline-block;
+    width: 0.55em;
+    height: 1.05em;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    background: currentColor;
+    animation: caret-blink 1s steps(1) infinite;
+}
+@keyframes caret-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .terminal-line .caret { animation: none; } }

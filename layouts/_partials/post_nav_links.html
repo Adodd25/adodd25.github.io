@@ -1,0 +1,30 @@
+{{- /* Override of PaperMod's post_nav_links.html: walks the pages in reading
+       order (by weight) with clear "Previous" / "Next" labels. */ -}}
+{{- $pages := (where site.RegularPages "Type" "in" site.Params.mainSections).ByWeight }}
+{{- $idx := -1 }}
+{{- range $i, $p := $pages }}{{ if eq $p $ }}{{ $idx = $i }}{{ end }}{{ end }}
+{{- if ge $idx 0 }}
+<nav class="paginav">
+  {{- if gt $idx 0 }}
+  {{- with index $pages (sub $idx 1) }}
+  <a class="prev" href="{{ .Permalink }}">
+    <span class="title">← Previous</span>
+    <span>{{ .Title }}</span>
+  </a>
+  {{- end }}
+  {{- end }}
+  {{- if lt (add $idx 1) (len $pages) }}
+  {{- with index $pages (add $idx 1) }}
+  <a class="next" href="{{ .Permalink }}">
+    <span class="title">Next →</span>
+    <span>{{ .Title }}</span>
+  </a>
+  {{- end }}
+  {{- else }}
+  <a class="next" href="{{ "" | relURL }}">
+    <span class="title">Back to start →</span>
+    <span>Home</span>
+  </a>
+  {{- end }}
+</nav>
+{{- end }}

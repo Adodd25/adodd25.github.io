@@ -1,0 +1,112 @@
+/* ---- Labeled light/dark mode button in the header ---- */
+.logo-switches > #theme-toggle {
+    align-self: center;
+    min-height: 0;
+    height: auto;
+}
+#theme-toggle {
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--entry);
+    color: var(--primary);
+    font-size: 0.85rem;
+    line-height: 1;
+    cursor: pointer;
+}
+#theme-toggle:hover { border-color: var(--secondary); }
+[data-theme="light"] #theme-toggle::after { content: "Dark mode"; }
+[data-theme="dark"] #theme-toggle::after { content: "Light mode"; }
+
+/* ---- Wrap the menu on small screens instead of scrolling sideways ---- */
+@media (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        white-space: normal;
+        row-gap: 0;
+        line-height: 2.4rem;
+    }
+}
+
+/* ---- Buttons (home page, resume) ---- */
+.home-buttons,
+.resume-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.2rem 0 0.4rem;
+}
+.btn,
+.post-content a.btn {
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--entry);
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: border-color 0.15s, transform 0.15s;
+}
+.btn:hover { border-color: var(--secondary); transform: translateY(-1px); }
+.btn-primary,
+.post-content a.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--theme);
+}
+
+/* ---- Bigger, clearer previous/next links at the bottom of each page ---- */
+.paginav { margin-top: 2.5rem; }
+.paginav a { padding: 1rem 1.1rem; }
+.paginav .title { font-weight: 600; }
+
+/* ---- Resume: tighter headings, clean print ---- */
+.post-content h3 + p em,
+.post-content h3 + p > em:only-child { color: var(--secondary); }
+@page { margin: 0.6in; }
+@media print {
+    :root, :root[data-theme] {
+        --primary: #000; --content: #111; --secondary: #444;
+        --theme: #fff; --entry: #fff; --border: #ccc;
+    }
+    .post-content { font-size: 14px; }
+    .post-content li { margin-bottom: 2px; }
+    .header, .footer, .top-link, .paginav, .toc, .post-tags,
+    .breadcrumbs, .resume-actions, .post-footer { display: none !important; }
+    body, .main { background: #fff !important; color: #000 !important; }
+    .main { max-width: none; padding: 0; }
+    .post-content a { color: #000; box-shadow: none; }
+    .post-title { font-size: 28px; margin-bottom: 0; }
+    .post-content h2 { margin-top: 18px; }
+    .post-content h3 { margin-top: 12px; }
+}
+
+/* ---- "Keep reading" cards ---- */
+.page-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+.post-content a.page-link-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--entry);
+    box-shadow: none;
+    text-decoration: none;
+    transition: border-color 0.15s, transform 0.15s;
+}
+.post-content a.page-link-card:hover { border-color: var(--secondary); transform: translateY(-1px); }
+.page-link-card strong { color: var(--primary); }
+.page-link-card span { color: var(--secondary); font-size: 0.88rem; line-height: 1.4; }

@@ -2,7 +2,7 @@
 title: "Now"
 date: 2026-02-19
 lastmod: 2026-02-19
-weight: 3
+weight: 4
 summary: "What I'm focused on right now: Wharton, AI and security, and the conversations I'm looking for."
 tags: ["now"]
 ShowToc: false

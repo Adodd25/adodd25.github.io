@@ -29,7 +29,7 @@ params:
   ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   ShowWordCount: false
   ShowRssButtonInSectionTermList: true
@@ -53,6 +53,14 @@ params:
       to get hacked. This site is my professional operating manual: how I think
       about security, venture, and leadership.
 
+    Buttons:
+      - name: "View my resume"
+        url: "resume/"
+      - name: "Read my story"
+        url: "posts/my-story/"
+      - name: "About me"
+        url: "about/"
+
   socialIcons:
     - name: linkedin
       url: "https://www.linkedin.com/in/anthony-dodd/"
@@ -74,22 +82,34 @@ params:
 
 menu:
   main:
-    - identifier: about
+    - identifier: menu-about
       name: About
-      url: /about/
+      url: about/
       weight: 10
-    - identifier: archives
-      name: Archive
-      url: /archives/
+    - identifier: menu-resume
+      name: Resume
+      url: resume/
       weight: 20
-    - identifier: tags
-      name: Tags
-      url: /tags/
+    - identifier: menu-story
+      name: My Story
+      url: posts/my-story/
       weight: 30
+    - identifier: menu-beliefs
+      name: Beliefs
+      url: posts/beliefs/
+      weight: 40
+    - identifier: menu-now
+      name: Now
+      url: posts/now/
+      weight: 50
+    - identifier: menu-tracker
+      name: VC Tracker
+      url: posts/cyber-vc-prep/
+      weight: 60
     - identifier: search
       name: Search
-      url: /search/
-      weight: 40
+      url: search/
+      weight: 70
 
 markup:
   goldmark:

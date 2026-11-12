@@ -1,0 +1,9 @@
+{{- /* Grid of cards linking to every main page, in reading order. */ -}}
+<div class="page-links">
+{{- range (where site.RegularPages "Type" "in" site.Params.mainSections).ByWeight }}
+  <a class="page-link-card" href="{{ .RelPermalink }}">
+    <strong>{{ .Title }}</strong>
+    <span>{{ .Summary | plainify | truncate 110 }}</span>
+  </a>
+{{- end }}
+</div>

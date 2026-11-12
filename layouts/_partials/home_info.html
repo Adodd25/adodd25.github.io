@@ -1,0 +1,22 @@
+{{- /* Override of PaperMod's home_info.html: adds a row of buttons under the intro. */ -}}
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    <div class="entry-content md-content">
+        {{ $opts := dict "display" "block" }}
+        {{ .Content | $.Page.RenderString $opts }}
+    </div>
+    {{- with .Buttons }}
+    <div class="home-buttons">
+        {{- range $i, $b := . }}
+        <a class="btn{{ if eq $i 0 }} btn-primary{{ end }}" href="{{ $b.url | relURL }}">{{ $b.name }}</a>
+        {{- end }}
+    </div>
+    {{- end }}
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- end -}}

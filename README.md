@@ -63,4 +63,4 @@ Now  → Studying how AI can improve cybersecurity and business strategy
 
 This manual is inspired by [Bloomberg Beta's operating manual](https://github.com/Bloomberg-Beta/Manual). I believe in transparency about how I work and what I believe.
 
-The website is built from the `content/` folder with [Hugo](https://gohugo.io/) and the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, and deploys automatically to GitHub Pages on every push to `main`.
+The website is built from the `content/` folder with [Hugo](https://gohugo.io/) and the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, and deploys automatically to GitHub Pages on every push to `Main`.

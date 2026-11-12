@@ -1,0 +1,99 @@
+# Default address for this repo. The deploy workflow overrides this with
+# whatever GitHub Pages reports, so renaming the repo or adding a custom
+# domain needs no change here.
+baseURL: "https://adodd25.github.io/about-me/"
+locale: en-us
+title: "Anthony Dodd"
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home: [HTML, RSS, JSON] # JSON powers the search page
+
+params:
+  env: production
+  title: "Anthony Dodd"
+  description: "Wharton MBA candidate · Cybersecurity · Venture Fellow. My professional operating manual — how I think about security, venture, and leadership."
+  author: Anthony Dodd
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # follows the visitor's light/dark setting
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  hideFooter: false
+  comments: false
+  hidemeta: false
+  showtoc: false
+  tocopen: false
+
+  homeInfoParams:
+    Title: "Hi, I'm Anthony 👋"
+    Content: >
+      Wharton MBA candidate · Cybersecurity · Venture Fellow.
+
+
+      I went to college to become a physical therapist. Now I study how AI can
+      transform cybersecurity and business — while advising startups on how not
+      to get hacked. This site is my professional operating manual: how I think
+      about security, venture, and leadership.
+
+  socialIcons:
+    - name: linkedin
+      url: "https://www.linkedin.com/in/anthony-dodd/"
+    - name: github
+      url: "https://github.com/Adodd25"
+    - name: email
+      url: "mailto:dodd9jr@gmail.com"
+    - name: rss
+      url: "index.xml"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: archives
+      name: Archive
+      url: /archives/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+  highlight:
+    noClasses: false

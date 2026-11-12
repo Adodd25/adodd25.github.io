@@ -1,7 +1,12 @@
-# My Story
-
-[← Back to main](README.md)
-
+---
+title: "My Story"
+date: 2026-01-17
+lastmod: 2026-02-10
+weight: 1
+summary: "From physical therapy to cybersecurity — the unexpected path from Morehouse to the Federal Reserve to Wharton."
+tags: ["career", "cybersecurity"]
+ShowToc: false
+TocOpen: false
 ---
 
 ## The Unexpected Path
@@ -59,7 +64,3 @@ I'm also a **Senior Fellow at HBCUvc**, where I mentor founders and work to buil
 4. **Communication is everything.** PTs explain complex medical concepts to patients. Security leaders explain complex risks to executives. Same skill, different domain.
 
 5. **The human element matters.** Bodies are unpredictable. So are people. The best security accounts for human behavior, not just technical controls.
-
----
-
-[← Back to main](README.md)

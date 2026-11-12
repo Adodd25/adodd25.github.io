@@ -2,7 +2,7 @@
 title: "My Story"
 date: 2026-01-17
 lastmod: 2026-02-10
-weight: 1
+weight: 2
 summary: "From physical therapy to cybersecurity — the unexpected path from Morehouse to the Federal Reserve to Wharton."
 tags: ["career", "cybersecurity"]
 ShowToc: false

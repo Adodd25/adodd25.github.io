@@ -2,7 +2,7 @@
 title: "What I Believe"
 date: 2026-01-17
 lastmod: 2026-02-10
-weight: 2
+weight: 3
 summary: "My principles on security, leadership, career, and building inclusive ecosystems — plus the things I've changed my mind about."
 tags: ["security", "leadership", "venture"]
 ShowToc: true

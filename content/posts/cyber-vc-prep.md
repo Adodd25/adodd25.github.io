@@ -2,7 +2,7 @@
 title: "Cybersecurity VC Prep Tracker"
 date: 2026-08-16
 lastmod: 2026-08-16
-weight: 4
+weight: 5
 summary: "The AI-security market map, company tracker, and reading list I use to stay current on cybersecurity venture."
 tags: ["venture", "cybersecurity", "AI", "market map"]
 ShowToc: true

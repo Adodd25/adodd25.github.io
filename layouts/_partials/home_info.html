@@ -4,6 +4,9 @@
     <header class="entry-header">
         <h1>{{ .Title | markdownify }}</h1>
     </header>
+    {{- with .Terminal }}
+    <p class="terminal-line" aria-hidden="true"><span class="prompt">anthony@wharton:~$</span> <span id="typed" data-phrases="{{ . | jsonify }}"></span><span class="caret"></span></p>
+    {{- end }}
     <div class="entry-content md-content">
         {{ $opts := dict "display" "block" }}
         {{ .Content | $.Page.RenderString $opts }}

@@ -8,17 +8,19 @@ I went to college to become a physical therapist. Now I study how AI can transfo
 
 This is my professional operating manual — how I think about security, venture, and leadership.
 
+**🌐 Read it as a website: [adodd25.github.io](https://adodd25.github.io/)**
+
 ---
 
 ## Start Here
 
-**[My Story](my-story.md)** — From physical therapy to cybersecurity. The unexpected path.
+**[My Story](content/posts/my-story.md)** — From physical therapy to cybersecurity. The unexpected path.
 
-**[What I Believe](beliefs.md)** — My principles on security, leadership, and building inclusive ecosystems.
+**[What I Believe](content/posts/beliefs.md)** — My principles on security, leadership, and building inclusive ecosystems.
 
-**[Now](now.md)** — What I'm currently focused on. Updated regularly.
+**[Now](content/posts/now.md)** — What I'm currently focused on. Updated regularly.
 
-**[Cyber VC Prep](cyber-vc-prep.md)** — The AI-security market map, company tracker, and reading list I use to stay current.
+**[Cyber VC Prep](content/posts/cyber-vc-prep.md)** — The AI-security market map, company tracker, and reading list I use to stay current.
 
 ---
 
@@ -60,3 +62,5 @@ Now  → Studying how AI can improve cybersecurity and business strategy
 ## Colophon
 
 This manual is inspired by [Bloomberg Beta's operating manual](https://github.com/Bloomberg-Beta/Manual). I believe in transparency about how I work and what I believe.
+
+The website is built from the `content/` folder with [Hugo](https://gohugo.io/) and the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, and deploys automatically to GitHub Pages on every push to `Main`.

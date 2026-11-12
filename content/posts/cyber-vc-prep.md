@@ -1,7 +1,12 @@
-# Cybersecurity VC Prep Tracker
-
-[← Back to main](README.md)
-
+---
+title: "Cybersecurity VC Prep Tracker"
+date: 2026-08-16
+lastmod: 2026-08-16
+weight: 4
+summary: "The AI-security market map, company tracker, and reading list I use to stay current on cybersecurity venture."
+tags: ["venture", "cybersecurity", "AI", "market map"]
+ShowToc: true
+TocOpen: false
 ---
 
 ## The Landscape
@@ -191,7 +196,3 @@ These are the six I actually subscribe to and read consistently.
 - [Simon Willison's Weblog](https://simonwillison.net/) — The best running record of prompt injection
 - [OWASP GenAI Security Project](https://genai.owasp.org/) — Top 10 for LLM applications
 - [Chasing Polaris](https://wickey.substack.com/) — Wickey Wang — AI agent security and non-human identity
-
----
-
-[← Back to main](README.md)

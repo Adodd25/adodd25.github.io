@@ -1,7 +1,12 @@
-# What I Believe
-
-[← Back to main](README.md)
-
+---
+title: "What I Believe"
+date: 2026-01-17
+lastmod: 2026-02-10
+weight: 2
+summary: "My principles on security, leadership, career, and building inclusive ecosystems — plus the things I've changed my mind about."
+tags: ["security", "leadership", "venture"]
+ShowToc: true
+TocOpen: false
 ---
 
 ## On Security
@@ -71,7 +76,3 @@
 4. **Embrace the uncomfortable.** I went from studying the human body to protecting financial infrastructure. Every major leap felt wrong at first.
 
 5. **Leave things better than you found them.** Code, teams, organizations, communities.
-
----
-
-[← Back to main](README.md)

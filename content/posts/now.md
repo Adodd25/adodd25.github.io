@@ -1,10 +1,15 @@
-# Now
-
-[← Back to main](README.md)
+---
+title: "Now"
+date: 2026-02-19
+lastmod: 2026-02-19
+weight: 3
+summary: "What I'm focused on right now: Wharton, AI and security, and the conversations I'm looking for."
+tags: ["now"]
+ShowToc: false
+TocOpen: false
+---
 
 *Last updated: February 2026*
-
----
 
 This is a [now page](https://nownownow.com/about). It's what I'd tell a friend I hadn't seen in a year about what I'm focused on.
 
@@ -41,7 +46,3 @@ I'm in my MBA program at **The Wharton School**, focusing on Strategic Managemen
 - Advisory roles for early-stage security startups
 - Speaking on cybersecurity, career transitions, or diversity in tech
 - Connecting with other Wharton students building in security
-
----
-
-[← Back to main](README.md)

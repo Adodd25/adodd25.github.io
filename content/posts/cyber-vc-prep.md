@@ -1,7 +1,7 @@
 ---
 title: "Cybersecurity VC Prep Tracker"
 date: 2026-08-16
-lastmod: 2026-08-16
+lastmod: 2026-11-17
 weight: 5
 summary: "The AI-security market map, company tracker, and reading list I use to stay current on cybersecurity venture."
 tags: ["venture", "cybersecurity", "AI", "market map"]
@@ -44,7 +44,7 @@ I track companies across eight layers of the AI-era security stack, plus public 
 | Company | Notes |
 |---|---|
 | Protect AI | Acquired by Palo Alto. Exit comp for the whole layer. |
-| Lakera | Prompt injection defense. Gandalf as a distribution hack. |
+| Lakera | Prompt injection defense. Gandalf as a distribution hack. Acquired by Check Point. |
 | HiddenLayer | MLDR, model scanning. |
 | Robust Intelligence | Acquired by Cisco. Early exit comp for model security. |
 | Prompt Security | Acquired by SentinelOne. Short path from seed to strategic. |
@@ -76,7 +76,7 @@ I track companies across eight layers of the AI-era security stack, plus public 
 | Credo AI | Enterprise AI governance. |
 | Cranium | AI security posture, Big-4 spinout. |
 | Holistic AI | Audit and assurance. |
-| CalypsoAI | Model security and observability. |
+| CalypsoAI | Model security and observability. Acquired by F5. |
 | Fairly AI | Regulated-industry AI risk. |
 
 ### AI-Native SOC
@@ -121,6 +121,7 @@ I track companies across eight layers of the AI-era security stack, plus public 
 | Reality Defender | Deepfake detection. |
 | GetReal Labs | Media authentication. |
 | Doppel | Social engineering / brand protection. |
+| Nametag | Identity verification against deepfake onboarding. |
 
 ### Supply Chain
 
@@ -130,7 +131,6 @@ I track companies across eight layers of the AI-era security stack, plus public 
 | Endor Labs | Reachability analysis for SCA. |
 | Socket | Dependency threat detection. |
 | Semgrep | OSS-led appsec. |
-| Nametag | Identity verification against deepfake onboarding. |
 
 ---
 

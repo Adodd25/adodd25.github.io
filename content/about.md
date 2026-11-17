@@ -39,7 +39,6 @@ I think the next generation of security leaders will look more like business str
 ## Ask Me About
 
 - Building security programs from scratch
-- Breaking into cybersecurity from a non-traditional background
 - Cloud security architecture for financial institutions
 - AI's impact on cybersecurity, on offense and defense
 - Where cybersecurity and venture capital meet

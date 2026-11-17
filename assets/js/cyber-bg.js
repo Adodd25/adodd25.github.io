@@ -225,7 +225,8 @@
   window.addEventListener("pointermove", (e) => {
     mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = e.pointerType === "mouse";
   }, { passive: true });
-  document.addEventListener("pointerleave", () => { mouse.active = false; });
+  // `pointerleave` never fires on document; a mouseout with no target means the pointer left the window.
+  document.addEventListener("mouseout", (e) => { if (!e.relatedTarget) mouse.active = false; });
   window.addEventListener("click", (e) => {
     if (!running || e.target.closest("a, button, input, summary")) return;
     let nearest = null, best = Infinity;

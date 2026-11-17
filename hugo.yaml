@@ -23,6 +23,7 @@ params:
   description: "Wharton MBA candidate · Cybersecurity · Venture Fellow. My professional operating manual — how I think about security, venture, and leadership."
   author: Anthony Dodd
   DateFormat: "January 2, 2006"
+  images: ["og.png"] # link preview for LinkedIn, Slack, iMessage…
   defaultTheme: auto # follows the visitor's light/dark setting
   disableThemeToggle: false
 
@@ -44,6 +45,7 @@ params:
 
   homeInfoParams:
     Title: "Hi, I'm Anthony 👋"
+    Highlight: "Anthony" # shown in the accent gradient
     Content: >
       Wharton MBA candidate · Cybersecurity · Venture Fellow.
 
@@ -59,6 +61,19 @@ params:
       - "scanning network… 0 threats found. welcome."
       - "translating risk for the boardroom"
       - "sudo make startups-secure"
+    Stats:
+      - value: 90
+        suffix: "%"
+        label: "MFA compliance across the Fed's Sixth District, up from 30%"
+      - value: 50
+        suffix: "%"
+        label: "Faster response to security alerts"
+      - value: 20
+        label: "Startups advised on security at Techstars"
+      - value: 150
+        prefix: "$"
+        suffix: "M"
+        label: "New venture fund supported at Techstars"
     Buttons:
       - name: "View my resume"
         url: "resume/"

@@ -1,8 +1,12 @@
-{{- /* Override of PaperMod's home_info.html: adds a row of buttons under the intro. */ -}}
+{{- /* Override of PaperMod's home_info.html: gradient name, typing terminal line,
+       a row of headline stats, and buttons under the intro. */ -}}
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
     <header class="entry-header">
-        <h1>{{ .Title | markdownify }}</h1>
+        {{- $title := .Title | markdownify }}
+        {{- with .Highlight }}{{ $title = replace $title . (printf `<span class="grad">%s</span>` .) }}{{ end }}
+        {{- $title = replace $title "👋" `<span class="wave" aria-hidden="true">👋</span>` }}
+        <h1>{{ $title | safeHTML }}</h1>
     </header>
     {{- with .Terminal }}
     <p class="terminal-line" aria-hidden="true"><span class="prompt">anthony@wharton:~$</span> <span id="typed" data-phrases="{{ . | jsonify }}"></span><span class="caret"></span></p>
@@ -11,6 +15,16 @@
         {{ $opts := dict "display" "block" }}
         {{ .Content | $.Page.RenderString $opts }}
     </div>
+    {{- with .Stats }}
+    <ul class="home-stats">
+        {{- range . }}
+        <li class="stat">
+            <span class="stat-value" data-count="{{ .value }}" data-prefix="{{ .prefix }}" data-suffix="{{ .suffix }}">{{ .prefix }}{{ .value }}{{ .suffix }}</span>
+            <span class="stat-label">{{ .label }}</span>
+        </li>
+        {{- end }}
+    </ul>
+    {{- end }}
     {{- with .Buttons }}
     <div class="home-buttons">
         {{- range $i, $b := . }}

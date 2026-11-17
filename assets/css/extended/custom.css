@@ -157,3 +157,184 @@ body, body.list, [data-theme="dark"] body.list { background: transparent; }
     .terminal-line { min-height: 3.2em; }
     .terminal-line .prompt { display: none; }
 }
+
+/* =====================================================================
+   Polish: accent palette, glass surfaces, gradient name, stats, motion
+   ===================================================================== */
+:root {
+    --accent: 15, 118, 110;      /* teal */
+    --accent-2: 2, 132, 199;     /* sky */
+    --glass: color-mix(in srgb, var(--entry) 78%, transparent);
+}
+:root[data-theme="dark"] {
+    --accent: 45, 212, 191;
+    --accent-2: 56, 189, 248;
+    --glass: color-mix(in srgb, var(--entry) 70%, transparent);
+}
+::selection { background: rgba(var(--accent), 0.25); }
+
+/* Frosted, sticky header on larger screens (the menu wraps on phones, so it scrolls away there) */
+@media (min-width: 769px) {
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: color-mix(in srgb, var(--theme) 72%, transparent);
+        backdrop-filter: blur(12px) saturate(1.4);
+        -webkit-backdrop-filter: blur(12px) saturate(1.4);
+        border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+    }
+    html { scroll-padding-top: calc(var(--header-height) + 16px); }
+}
+#menu a { position: relative; }
+#menu a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 14px;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, rgb(var(--accent)), rgb(var(--accent-2)));
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+#menu a:hover::after, #menu a:has(.active)::after { transform: scaleX(1); }
+.menu .active { text-decoration: none; }
+
+/* Gradient name + waving hand */
+.home-info h1 .grad {
+    background: linear-gradient(110deg, rgb(var(--accent)) 0%, rgb(var(--accent-2)) 50%, rgb(var(--accent)) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: grad-shift 6s ease-in-out infinite alternate;
+}
+@keyframes grad-shift { to { background-position: 200% center; } }
+.home-info h1 .wave {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: wave 2.6s ease-in-out 0.6s 2;
+}
+@keyframes wave {
+    0%, 60%, 100% { transform: rotate(0); }
+    10%, 30% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+}
+
+/* Headline stats */
+.home-stats {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.7rem;
+    margin: 1.4rem 0 0.2rem;
+    padding: 0;
+}
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.85rem 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--glass);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+.stat-value {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+    background: linear-gradient(120deg, rgb(var(--accent)), rgb(var(--accent-2)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.stat-label { font-size: 0.8rem; line-height: 1.35; color: var(--secondary); }
+
+/* Glass cards with an accent glow */
+.post-entry,
+.post-content a.page-link-card {
+    background: var(--glass);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 12px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.post-entry:hover,
+.post-entry:focus-within,
+.post-content a.page-link-card:hover {
+    border-color: rgba(var(--accent), 0.55);
+    box-shadow: 0 10px 30px -14px rgba(var(--accent), 0.55);
+    transform: translateY(-3px);
+}
+.post-entry .entry-header h2 { transition: color 0.2s; }
+.post-entry:hover .entry-header h2 { color: rgb(var(--accent)); }
+
+/* Gradient primary button */
+.btn-primary,
+.post-content a.btn-primary {
+    background: linear-gradient(135deg, rgb(15, 118, 110), rgb(3, 105, 161));
+    border-color: transparent;
+    color: #fff;
+}
+.btn:hover { box-shadow: 0 8px 22px -12px rgba(var(--accent), 0.7); }
+
+/* Long-form pages: accent headings and links */
+.post-content h2 { position: relative; padding-top: 0.4rem; }
+.post-content h2::before {
+    content: "";
+    display: block;
+    width: 2.2rem;
+    height: 3px;
+    margin-bottom: 0.6rem;
+    border-radius: 3px;
+    background: linear-gradient(90deg, rgb(var(--accent)), rgb(var(--accent-2)));
+}
+.post-content a:not(.btn):not(.page-link-card) {
+    box-shadow: 0 1px 0 rgba(var(--accent), 0.6);
+    transition: box-shadow 0.15s, color 0.15s;
+}
+.post-content a:not(.btn):not(.page-link-card):hover {
+    color: rgb(var(--accent));
+    box-shadow: 0 2px 0 rgb(var(--accent));
+}
+.post-content table { border-radius: 10px; overflow: hidden; }
+.post-content thead th { background: rgba(var(--accent), 0.08); }
+.post-content blockquote { border-inline-start-color: rgb(var(--accent)); }
+
+/* Reading progress */
+.read-progress {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    z-index: 30;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    background: linear-gradient(90deg, rgb(var(--accent)), rgb(var(--accent-2)));
+    pointer-events: none;
+}
+
+/* Fade-in on scroll (class added by JS only) */
+.reveal { opacity: 0; transform: translateY(14px); }
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.25s, box-shadow 0.25s;
+}
+.reveal.is-visible:hover,
+.reveal.is-visible:focus-within { transform: translateY(-3px); transition-delay: 0s !important; }
+
+@media (prefers-reduced-motion: reduce) {
+    .home-info h1 .grad, .home-info h1 .wave { animation: none; }
+    .post-entry, .page-link-card, .btn { transition: none; }
+}
+@media print {
+    .read-progress { display: none; }
+    .reveal { opacity: 1; transform: none; }
+    .post-content h2::before { display: none; }
+    .post-content a:not(.btn) { box-shadow: none; }
+}

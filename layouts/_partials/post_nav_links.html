@@ -7,7 +7,7 @@
 <nav class="paginav">
   {{- if gt $idx 0 }}
   {{- with index $pages (sub $idx 1) }}
-  <a class="prev" href="{{ .Permalink }}">
+  <a class="prev" href="{{ .RelPermalink }}">
     <span class="title">← Previous</span>
     <span>{{ .Title }}</span>
   </a>
@@ -15,7 +15,7 @@
   {{- end }}
   {{- if lt (add $idx 1) (len $pages) }}
   {{- with index $pages (add $idx 1) }}
-  <a class="next" href="{{ .Permalink }}">
+  <a class="next" href="{{ .RelPermalink }}">
     <span class="title">Next →</span>
     <span>{{ .Title }}</span>
   </a>

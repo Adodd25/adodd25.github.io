@@ -1,7 +1,7 @@
 ---
 title: "My Story"
 date: 2026-01-17
-lastmod: 2026-02-10
+lastmod: 2026-11-17
 weight: 2
 summary: "From physical therapy to cybersecurity — the unexpected path from Morehouse to the Federal Reserve to Wharton."
 tags: ["career", "cybersecurity"]
@@ -39,15 +39,17 @@ The non-traditional background I thought was a weakness became my strength. I th
 
 **Protiviti** gave me my first professional security role. I conducted assessments for Fortune 500 companies and presented findings to C-suite executives. I learned how to translate technical risk into business language.
 
-**Techstars** opened my eyes to venture capital. As a VC Fellow, I advised 20+ startups on security strategy and helped structure investor relations for a $150M fund. I saw how security could enable—or destroy—young companies.
+**Techstars** opened my eyes to venture capital. As a VC Fellow, I advised 20 startups on security strategy and helped structure investor relations for a $150M fund. I saw how security could enable—or destroy—young companies.
 
-**The Federal Reserve Bank of Atlanta** is where I found my calling. I oversaw multifactor authentication across the Sixth District and designed cloud security solutions for critical financial infrastructure. The work mattered. When you're protecting the systems that underpin the American economy, there's no room for error.
+**The Federal Reserve Bank of Atlanta** is where I found my calling. I led the project that took the Sixth District's multi-factor authentication compliance from 30% to 90%, and built tooling with the CISO that cut our response time to security alerts in half. The work mattered. When you're protecting the systems that underpin the American economy, there's no room for error.
 
 ---
 
 ## What's Next
 
 I'm pursuing my **MBA at The Wharton School** because I believe the future of security leadership requires business acumen. The best CISOs aren't just technical experts—they're strategists who can align security with business objectives.
+
+I spent the summer of 2026 as a **Summer Associate at Bain & Company**, building an investment thesis for a major amusement park operator. Nothing to do with security on the surface—and exactly the kind of strategic, numbers-first problem solving I came to business school to learn.
 
 I'm also a **Senior Fellow at HBCUvc**, where I mentor founders and work to build inclusive pathways into venture capital. My unconventional path taught me that talent is everywhere, but opportunity isn't. I want to change that.
 
